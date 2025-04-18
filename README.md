@@ -25,9 +25,7 @@ Além disso, o editor inclui uma interface moderna com suporte para alternar ent
 - **Font Awesome**: Ícones utilizados para representar as funcionalidades do editor.
 - **Google Fonts (Poppins)**: Fonte moderna e limpa para a interface do editor.
 
-## Como Usar
 
-1. Clone este repositório para o seu computador:
 
 
 ![image](https://github.com/user-attachments/assets/2291a3f8-6cf8-4c5b-8398-fe78af9b492a)
