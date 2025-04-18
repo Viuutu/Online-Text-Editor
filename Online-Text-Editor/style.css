@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.light-theme {
+    background-color: #f4f4f9;
+    color: #020929;
+}
+
+.dark-theme {
+    background-color: #1a1a1a;
+    color: #f4f4f9;
+}
+
+.container {
+    background-color: #fff;
+    width: 90%;
+    max-width: 1100px;
+    padding: 30px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    border-radius: 10px;
+    box-shadow: 0 25px 50px rgba(7, 20, 35, 0.2);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    transition: background-color 0.3s;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.theme-toggle-btn {
+    background: none;
+    border: none;
+    color: inherit;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.theme-toggle-btn:hover {
+    transform: scale(1.1);
+}
+
+.options {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(40px, 1fr));
+    gap: 10px;
+    align-items: center;
+    justify-items: center;
+}
+
+button,
+select,
+input[type="color"] {
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    border: none;
+    background-color: #fff;
+    color: #020929;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+button:hover,
+select:hover,
+input[type="color"]:hover {
+    background-color: #e0e9ff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+button:focus,
+select:focus,
+input[type="color"]:focus {
+    outline: none;
+    box-shadow: 0 0 5px 2px #338cf4;
+}
+
+.text-editor {
+    margin-top: 10px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    height: 50vh;
+    overflow-y: auto;
+    font-size: 1rem;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.text-editor:focus {
+    border-color: #338cf4;
+}
+
+.light-theme .text-editor {
+    background-color: #ffffff;
+}
+
+.dark-theme .text-editor {
+    background-color: #333333;
+}
+
+.input-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+    }
+
+    .options {
+        grid-template-columns: repeat(auto-fill, minmax(40px, 1fr));
+    }
+
+    .text-editor {
+        height: 40vh;
+    }
+}
